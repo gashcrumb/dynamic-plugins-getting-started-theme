@@ -4,9 +4,9 @@ import { AutocompleteClassKey } from '@mui/material/Autocomplete';
 import { PaletteOptions, SimplePaletteColorOptions } from '@mui/material/styles';
 import {
   headerFontFamily,
-  pfBoxShadowLg,
-  pfBoxShadowSm,
-  pfColorGreen400,
+  themeBoxShadowLg,
+  themeBoxShadowSm,
+  themeColorGreen400,
 } from './consts';
 
 // Labs types not included in overrides; https://github.com/mui/material-ui/issues/19427
@@ -30,8 +30,7 @@ export function createComponentOverrides(
     BackstageHeader: {
       styleOverrides: {
         header: {
-          backgroundImage: 'unset',
-          boxShadow: pfBoxShadowSm,
+          boxShadow: themeBoxShadowSm,
         },
         title: {
           fontSize: '24px',
@@ -76,14 +75,15 @@ export function createComponentOverrides(
     BackstageTable: {
       styleOverrides: {
         root: {
-          boxShadow: pfBoxShadowSm,
+          boxShadow: themeBoxShadowSm,
           backgroundColor: palette.background?.paper,
           borderColor: palette.border,
           borderWidth: '1px',
-          borderRadius: '3px',
+          borderRadius: '15px',
           borderStyle: 'solid',
-          padding: '1.5rem',
+          padding: '1rem',
           paddingTop: 3, // works around padding from the header title
+          textWrap: 'pretty',
           '&> :first-child': {
             boxShadow: 'none',
           },
@@ -127,7 +127,7 @@ export function createComponentOverrides(
       styleOverrides: {
         panel: {
           backgroundColor: `${palette.background?.default}`,
-          boxShadow: pfBoxShadowLg,
+          boxShadow: themeBoxShadowLg,
         },
       },
     },
@@ -164,7 +164,7 @@ export function createComponentOverrides(
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '3px',
+          borderRadius: '15px',
           paddingLeft: '1rem',
           paddingRight: '1rem',
           textTransform: 'none',
@@ -183,7 +183,7 @@ export function createComponentOverrides(
       styleOverrides: {
         root: {
           borderRadius: 0,
-          boxShadow: pfBoxShadowLg,
+          boxShadow: themeBoxShadowLg,
           borderTop: `2px solid ${palette.border}`,
         },
         standardError: {
@@ -203,11 +203,11 @@ export function createComponentOverrides(
           },
         },
         standardSuccess: {
-          borderTopColor: pfColorGreen400,
-          color: pfColorGreen400,
+          borderTopColor: themeColorGreen400,
+          color: themeColorGreen400,
           backgroundColor: palette.background?.default,
           '& $icon': {
-            color: pfColorGreen400,
+            color: themeColorGreen400,
           },
         },
         standardWarning: {
@@ -251,7 +251,7 @@ export function createComponentOverrides(
           borderWidth: '1px',
           borderRadius: 0,
           borderStyle: 'solid',
-          boxShadow: pfBoxShadowSm,
+          boxShadow: themeBoxShadowSm,
           display: 'flex',
           flexDirection: 'column',
           '& > hr': {

@@ -1,13 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: dynamic-plugins-getting-started
-  description: An example of a Backstage application.
+  name: dynamic-plugins-getting-started-theme
+  description: An example Backstage theme in a dynamic plugin for Red Hat Developer Hub
   # Example for optional annotations
   # annotations:
   #   github.com/project-slug: backstage/backstage
   #   backstage.io/techdocs-ref: dir:.
 spec:
   type: website
-  owner: john@example.com
+  owner: gashcrumb@gmail.com
   lifecycle: experimental

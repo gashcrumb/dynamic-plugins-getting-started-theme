@@ -1,6 +1,6 @@
 dynamicPlugins:
   frontend:
-    internal.backstage-plugin-test-backstage-theme:
+    internal.backstage-plugin-example-backstage-theme:
       appIcons:
         - name: lightIcon
           importName: LightIcon
