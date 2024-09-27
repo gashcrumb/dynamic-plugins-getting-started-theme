@@ -69,3 +69,7 @@ Then use the supplied script to start an instance of Developer Hub using podman:
 ```bash
 bash ./01-run-example.sh
 ```
+
+And then open up http://localhost:7007 in a browser, the theme should be selectable in the settings page.
+
+![screenshot of example light theme](./screenshot.png)
