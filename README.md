@@ -1,5 +1,5 @@
 
-# An example project for building a dynamic plugin containing a theme that can be deployed to Red Hat Developer Hub
+# An example theme for Red Hat Developer Hub
 
 ## Overview
 
@@ -12,13 +12,13 @@ The theme is contained in a [regular Backstage plugin](plugins/example-backstage
 
 The theme itself is a modified version of [this example](https://github.com/backstage/demo/blob/7e86905ff207af3391511ffe38543a9c331090d0/packages/app/src/theme/aperture.ts) that makes a few changes to the Developer Hub UI, most notably some seriously rounded corners on the buttons and table borders.  This package also shows how to use [custom typography](plugins/example-backstage-theme/src/theme/consts.ts#L10-L43) and [component overrides](./plugins/example-backstage-theme/src/theme/componentOverrides.ts) as part of the theme.
 
+Finally here's some technical background of how this all works.  The theme is loaded by updating the Developer Hub frontend configuration to add the `theme` property to the plugin's `frontend` configuration.  This informs the Developer Hub frontend of the theme's existence, and the configuration is used to build the structure expected by the `theme` parameter of the Backstage `createApp` call.
+
 ## Prerequisites
 
 * node 20.x (node 18 may work fine also but untested)
 * npm (10.8.1 was used during development)
 * yarn (at least 3.8.1 is required)
-
-The commands used for deployment were developed with the bash shell in mind on Linux, some steps may require adjustment when trying this on a Windows environment.  This guide will try and highlight these cases, though probably WSL would work also (but hasn't been tested).
 
 ## The Guide
 
