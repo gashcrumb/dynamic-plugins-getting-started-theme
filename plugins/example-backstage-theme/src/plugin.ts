@@ -1,6 +1,6 @@
 import { createPlugin } from '@backstage/core-plugin-api';
 
-const pluginId = 'test-theme';
+const pluginId = 'example-theme';
 
 export const testThemePlugin = createPlugin({
   id: pluginId,

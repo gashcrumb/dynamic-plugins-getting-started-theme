@@ -1,9 +1,16 @@
 
-# A simple getting started project for building a dynamic plugins containing a theme for Red Hat Developer Hub
+# An example project for building a dynamic plugin containing a theme that can be deployed to Red Hat Developer Hub
 
 ## Overview
 
 > Note: The Dynamic Plugin functionality is a tech preview feature of Red Hat Developer Hub and is still under active development.  Aspects of developing, packaging and deployment of dynamic plugins are subject to change
+
+As of Red Hat Developer Hub 1.3, themes can be added from dynamic plugins, and it's also possible to replace the default theme provided with Developer Hub.
+This example demonstrates how a theme plugin can be developed and then installed into Developer Hub.  
+
+The theme is contained in a [regular Backstage plugin](plugins/example-backstage-theme/src/plugin.ts#L5-L9) and then exported as a dynamic plugin.  The plugin package exports two theme provider functions, one for the example light theme and a second for the example dark theme.
+
+The theme itself is a modified version of [this example](https://github.com/backstage/demo/blob/7e86905ff207af3391511ffe38543a9c331090d0/packages/app/src/theme/aperture.ts) that makes a few changes to the Developer Hub UI, most notably some seriously rounded corners on the buttons and table borders.  This package also shows how to use [custom typography](plugins/example-backstage-theme/src/theme/consts.ts#L10-L43) and [component overrides](./plugins/example-backstage-theme/src/theme/componentOverrides.ts) as part of the theme.
 
 ## Prerequisites
 
@@ -22,7 +29,11 @@ yarn install
 ```
 
 ```bash
-yarn tsc && yarn build
+yarn tsc 
+```
+
+```bash
+yarn build
 ```
 
 ```bash
@@ -70,6 +81,16 @@ Then use the supplied script to start an instance of Developer Hub using podman:
 bash ./01-run-example.sh
 ```
 
-And then open up http://localhost:7007 in a browser, the theme should be selectable in the settings page.
+And then open up <http://localhost:7007> in a browser, the theme should be selectable in the settings page.
 
 ![screenshot of example light theme](./screenshot.png)
+
+## Modifying the theme
+
+To develop the theme a small plugin development setup has been added [here](./plugins/example-backstage-theme/dev/index.tsx) with a couple example pages that have components on them.  To run this environment run the following command from the root of this repository:
+
+```bash
+yarn dev
+```
+
+This should open a browser pointing at <http://localhost:3000> which should contain the first example development page.  This is a live-reload environment, so changes to either the theme or development pages should effect a page refresh automatically.

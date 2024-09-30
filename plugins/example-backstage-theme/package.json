@@ -25,15 +25,9 @@
     "export-dynamic": "janus-cli package export-dynamic-plugin --clean"
   },
   "dependencies": {
-<<<<<<< HEAD:plugins/test-backstage-theme/package.json
-    "@backstage/core-components": "^0.14.10",
-    "@backstage/core-plugin-api": "^1.9.3",
-    "@backstage/theme": "^0.5.6",
-=======
     "@backstage/core-components": "0.14.9",
     "@backstage/core-plugin-api": "1.9.3",
     "@backstage/theme": "0.5.6",
->>>>>>> 61e579f (feat: improve theme example):plugins/example-backstage-theme/package.json
     "@mui/lab": "^5.0.0-alpha.173",
     "@mui/material": "5.16.7",
     "react-use": "^17.2.4"
