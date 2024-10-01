@@ -3,6 +3,6 @@ export {
   Brightness2 as DarkIcon,
 } from '@material-ui/icons';
 
-export { testThemePlugin as default } from './plugin';
+export { exampleThemePlugin as default } from './plugin';
 
 export { lightThemeProvider, darkThemeProvider } from './theme/providers';

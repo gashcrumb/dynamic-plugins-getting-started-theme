@@ -1,7 +1,7 @@
-import { testThemePlugin } from './plugin';
+import { exampleThemePlugin } from './plugin';
 
-describe('test-theme', () => {
+describe('example-theme', () => {
   it('should export plugin', () => {
-    expect(testThemePlugin).toBeDefined();
+    expect(exampleThemePlugin).toBeDefined();
   });
 });
