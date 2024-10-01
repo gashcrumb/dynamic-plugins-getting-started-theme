@@ -59,12 +59,12 @@ dynamicPlugins:
           importName: DarkIcon
       themes:
         - id: light  # Using 'light' overrides the app-provided light theme
-          title: Test Light Theme
+          title: Example Light Theme
           variant: light
           icon: lightIcon
           importName: lightThemeProvider
         - id: dark  # Using 'dark' overrides the app-provided dark theme
-          title: Test Dark Theme
+          title: Example Dark Theme
           variant: dark
           icon: darkIcon
           importName: darkThemeProvider
