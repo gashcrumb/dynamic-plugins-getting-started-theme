@@ -249,7 +249,7 @@ export function createComponentOverrides(
           backgroundColor: palette.background?.paper,
           borderColor: palette.border,
           borderWidth: '1px',
-          borderRadius: 0,
+          borderRadius: '15px',
           borderStyle: 'solid',
           boxShadow: themeBoxShadowSm,
           display: 'flex',
